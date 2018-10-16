@@ -1,0 +1,55 @@
+# Errores-notas
+
+Cronometro tiene que arrancar, parar y devolver tiempo.
+
+se utiliza la clase enviroment con el metodo TickCount para sacar el tiempo en milisegundos del PC
+
+Propuesta:
+
+class cronometro
+{
+	double tiempo1;
+	double tiempo2;
+}
+
+double arrancar
+{
+	tiempo1=enviroment.tickcount;
+	return tiempo1;
+}
+
+double parar
+{
+	tiempo2=enviroment.tickcount;
+	return tiempo2;
+}
+
+double devolver(double tiempo1, double tiempo2)
+{
+	return tiempo1-tiempo2;
+}
+
+
+
+-------------
+Buena:
+class Cronómetro
+{
+int arrancóEn;
+int paróEn;
+void Arranca()
+{
+arrancóEn = Environment.TickCount;
+}
+void Para()
+{
+paróEn = Environment.TickCount;
+}
+public long Tiempo()
+{
+return paróEn - arrancóEn;
+}
+}
+
+Errores: cuando haces un atributo en la clase se puede utilizar por los metodos (era logico), de esa forma pasar argumentos al metodo devolver es absurdo, como hacer los returns en los otros metodos.
+
