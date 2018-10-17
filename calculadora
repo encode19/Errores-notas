@@ -1,0 +1,32 @@
+namespace calculadora
+{
+    public class calculadora
+    {
+        public int Calcula(int num1, int num2, char operador)
+        {
+            switch(operador)
+            {
+                case '+': return num1+num2;
+                case '-': return num1 - num2;
+                case '*': return num1 * num2;
+                case '/': return num1 / num2;
+                default: return operador;
+            }
+
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int x = int.Parse(Console.ReadLine());
+            int y = int.Parse(Console.ReadLine());
+            char c = char.Parse(Console.ReadLine());
+
+            calculadora calculator = new calculadora();
+            int resul = calculator.Calcula(x, y, c);
+            Console.WriteLine("el resultado es: " + resul);
+            Console.ReadKey();
+        }
+    }
+}
