@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp5
+{
+    public class persona
+    {
+        public string nombre;
+        public int edad;
+        public string dni;
+        public persona(string nom)
+        {
+            nombre = nom;
+
+        }
+
+    }
+    class Program
+    {
+
+
+        static void Main(string[] args)
+        {
+            persona maria = new persona("1");
+            Console.WriteLine(maria.nombre);
+            Console.ReadKey();
+
+        }
+    }
+}
